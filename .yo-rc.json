@@ -3,7 +3,7 @@
     "promptValues": {
       "packageName": "ru.gpsbox.natmob",
       "nativeLanguage": "en",
-      "microservicePath": "/Users/alexredko/Projects/Java/jhipstnew/pond"
+      "microservicePath": "/Users/alexredko/Projects/Java/jhipstnew/vkbot"
     },
     "jhipsterVersion": "4.14.4",
     "baseName": "gate",

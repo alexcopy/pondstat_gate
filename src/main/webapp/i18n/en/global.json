@@ -17,6 +17,8 @@
                 "chemicalAnalysisMySuffix": "Chemical Analysis",
                 "chemicalsMySuffix": "Chemicals",
                 "otherWorksMySuffix": "Other Works",
+                "trainedModelMySuffix": "Trained Model",
+                "resultsMatricesMySuffix": "Results Matrices",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
