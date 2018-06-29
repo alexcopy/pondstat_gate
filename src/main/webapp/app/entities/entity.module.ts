@@ -12,6 +12,8 @@ import { GateChemicalsMySuffixModule } from './chemicals-my-suffix/chemicals-my-
 import { GateOtherWorksMySuffixModule } from './other-works-my-suffix/other-works-my-suffix.module';
 import { GateTrainedModelMySuffixModule } from './trained-model-my-suffix/trained-model-my-suffix.module';
 import { GateResultsMatricesMySuffixModule } from './results-matrices-my-suffix/results-matrices-my-suffix.module';
+import { GateClarifaisMySuffixModule } from './clarifais-my-suffix/clarifais-my-suffix.module';
+import { GateVkGroupMySuffixModule } from './vk-group-my-suffix/vk-group-my-suffix.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -28,6 +30,8 @@ import { GateResultsMatricesMySuffixModule } from './results-matrices-my-suffix/
         GateOtherWorksMySuffixModule,
         GateTrainedModelMySuffixModule,
         GateResultsMatricesMySuffixModule,
+        GateClarifaisMySuffixModule,
+        GateVkGroupMySuffixModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

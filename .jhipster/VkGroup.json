@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "changelogDate": "20180620111121",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "vk_group",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no",
+    "javadoc": "not an ignored comment",
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "vkbot",
+    "searchEngine": false
+}

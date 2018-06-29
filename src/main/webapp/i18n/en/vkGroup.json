@@ -1,0 +1,25 @@
+
+{
+    "gateApp": {
+        "vkGroup" : {
+            "home": {
+                "title": "Vk Groups",
+                "createLabel": "Create a new Vk Group",
+                "createOrEditLabel": "Create or edit a Vk Group"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Vk Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk Group"
+            }
+        }
+    },
+    "vkbotApp": {
+        "vkGroup" : {
+            "created": "A new Vk Group is created with identifier {{ param }}",
+            "updated": "A Vk Group is updated with identifier {{ param }}",
+            "deleted": "A Vk Group is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+
+{
+    "gateApp": {
+        "clarifais" : {
+            "home": {
+                "title": "Clarifais",
+                "createLabel": "Create a new Clarifais",
+                "createOrEditLabel": "Create or edit a Clarifais"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Clarifais {{ id }}?"
+            },
+            "detail": {
+                "title": "Clarifais"
+            },
+            "name": "Name",
+            "email": "Email",
+            "emailpassword": "Emailpassword",
+            "apikey": "Apikey",
+            "modelname": "Modelname",
+            "country": "Country",
+            "billday": "Billday",
+            "totalusage": "Totalusage",
+            "count": "Count"
+        }
+    },
+    "vkbotApp": {
+        "clarifais" : {
+            "created": "A new Clarifais is created with identifier {{ param }}",
+            "updated": "A Clarifais is updated with identifier {{ param }}",
+            "deleted": "A Clarifais is deleted with identifier {{ param }}"
+        }
+    }
+}

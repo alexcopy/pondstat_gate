@@ -1,0 +1,25 @@
+
+{
+    "gateApp": {
+        "vkGroup" : {
+            "home": {
+                "title": "Vk Groups",
+                "createLabel": "Создать новый Vk Group",
+                "createOrEditLabel": "Создать или отредактировать Vk Group"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Vk Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk Group"
+            }
+        }
+    },
+    "vkbotApp": {
+        "vkGroup" : {
+            "created": "Новый Vk Group создан с идентификатором {{ param }}",
+            "updated": "Vk Group обновлен с идентификатором {{ param }}",
+            "deleted": "Vk Group удален с идентификатором {{ param }}"
+        }
+    }
+}
