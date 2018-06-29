@@ -12,7 +12,18 @@
             },
             "detail": {
                 "title": "Vk Group"
-            }
+            },
+            "groupid": "Groupid",
+            "name": "Name",
+            "screenname": "Screenname",
+            "type": "Type",
+            "isclosed": "Isclosed",
+            "proc": "Proc",
+            "procusers": "Procusers",
+            "usersqty": "Usersqty",
+            "usersadded": "Usersadded",
+            "ignore": "Ignore",
+            "stateProvince": "State Province"
         }
     },
     "vkbotApp": {
