@@ -34,7 +34,7 @@
             },
             "admin": {
                 "main": "Администрирование",
-                "gateway": "Gateway",
+                "gateway": "Шлюз",
                 "userManagement": "Управление пользователями",
                 "tracker": "Трекер польз.",
                 "metrics": "Метрики",
@@ -51,6 +51,8 @@
         "form": {
             "username": "Логин",
             "username.placeholder": "Ваш логин",
+            "currentpassword": "Текущий пароль",
+            "currentpassword.placeholder": "Текущий пароль",
             "newpassword": "Новый пароль",
             "newpassword.placeholder": "Новый пароль",
             "confirmpassword": "Подтверждение нового пароля",
@@ -97,9 +99,9 @@
             "id" : "ID"
         },
         "ribbon": {
-            "dev":"Development"
+            "dev":"Разработка"
         },
-        "item-count": "Showing {{first}} - {{second}} of {{total}} items."
+        "item-count": "{{first}} - {{second}} из {{total}}"
     },
     "entity": {
         "action": {
@@ -109,7 +111,7 @@
             "cancel": "Отмена",
             "delete": "Удалить",
             "edit": "Изменить",
-            "open": "Open",
+            "open": "Открыть",
             "save": "Сохранить",
             "view": "Просмотр"
         },
@@ -134,14 +136,15 @@
         }
     },
     "error": {
-        "internalServerError": "Internal server error",
+        "internalServerError": "Внутренняя ошибка сервера",
         "server.not.reachable": "Сервер не доступен",
-        "url.not.found": "Not found",
+        "url.not.found": "Не найдено",
         "NotNull": "Поле {{fieldName}} не может быть пустым!",
         "Size": "Поле {{fieldName}} не отвечает требованиям мин/макс.го размера!",
         "userexists": "Имя пользователя уже используется!",
         "emailexists": "Эл. почта уже используется!!",
-        "idexists": "Новый {{entityName}} не может иметь данный ID"
+        "idexists": "Новый {{entityName}} не может иметь данный ID",
+        "idnull": "Неверный ID"
     },
     "footer": "Это ваш футтер"
 }

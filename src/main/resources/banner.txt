@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
     ${AnsiColor.GREEN}██╗      ██████╗ ████████╗${AnsiColor.RED}  █████╗ ██████╗ ██████╗
     ${AnsiColor.GREEN}██║     ██╔═══██╗╚══██╔══╝${AnsiColor.RED} ██╔══██╗██╔══██╗██╔══██╗
     ${AnsiColor.GREEN}██║     ██║   ██║   ██║   ${AnsiColor.RED} ███████║██████╔╝██████╔╝
@@ -8,3 +9,7 @@
 
 ${AnsiColor.BRIGHT_BLUE}:: LotApp 🤓  :: Running Spring Boot ${spring-boot.version} ::
 :: http://natmob.gpsox.ru ::${AnsiColor.DEFAULT}
+=======
+${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
+>>>>>>> jhipster_upgrade

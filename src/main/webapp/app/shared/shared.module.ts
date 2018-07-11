@@ -1,45 +1,14 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { NgbDateAdapter } from '@ng-bootstrap/ng-bootstrap';
 
-import {
-    GateSharedLibsModule,
-    GateSharedCommonModule,
-    CSRFService,
-    AuthServerProvider,
-    AccountService,
-    UserService,
-    StateStorageService,
-    LoginService,
-    Principal,
-    JhiTrackerService,
-    HasAnyAuthorityDirective,
-} from './';
+import { NgbDateMomentAdapter } from './util/datepicker-adapter';
+import { GateSharedLibsModule, GateSharedCommonModule, HasAnyAuthorityDirective } from './';
 
 @NgModule({
-    imports: [
-        GateSharedLibsModule,
-        GateSharedCommonModule
-    ],
-    declarations: [
-        HasAnyAuthorityDirective
-    ],
-    providers: [
-        LoginService,
-        AccountService,
-        StateStorageService,
-        Principal,
-        CSRFService,
-        JhiTrackerService,
-        AuthServerProvider,
-        UserService,
-        DatePipe
-    ],
-    exports: [
-        GateSharedCommonModule,
-        HasAnyAuthorityDirective,
-        DatePipe
-    ],
+    imports: [GateSharedLibsModule, GateSharedCommonModule],
+    declarations: [HasAnyAuthorityDirective],
+    providers: [{ provide: NgbDateAdapter, useClass: NgbDateMomentAdapter }],
+    exports: [GateSharedCommonModule, HasAnyAuthorityDirective],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
-
 })
 export class GateSharedModule {}

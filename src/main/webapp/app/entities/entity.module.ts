@@ -17,6 +17,7 @@ import { GateVkGroupMySuffixModule } from './vk-group-my-suffix/vk-group-my-suff
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
+    // prettier-ignore
     imports: [
         GateLocationMySuffixModule,
         GateTankMySuffixModule,
