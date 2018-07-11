@@ -1,0 +1,45 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="mySelectedKeyWordsLabel" jhiTranslate="gateApp.selectedKeyWords.home.createOrEditLabel">Create or edit a Selected Key Words</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!selectedKeyWords.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="selectedKeyWords.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.selectedKeyWords.modelid" for="field_modelid">Modelid</label>
+            <input type="number" class="form-control" name="modelid" id="field_modelid"
+                [(ngModel)]="selectedKeyWords.modelid" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.selectedKeyWords.posmatrix" for="field_posmatrix">Posmatrix</label>
+            <input type="text" class="form-control" name="posmatrix" id="field_posmatrix"
+                [(ngModel)]="selectedKeyWords.posmatrix" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.selectedKeyWords.neutmatrix" for="field_neutmatrix">Neutmatrix</label>
+            <input type="text" class="form-control" name="neutmatrix" id="field_neutmatrix"
+                [(ngModel)]="selectedKeyWords.neutmatrix" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="gateApp.selectedKeyWords.negmatrix" for="field_negmatrix">Negmatrix</label>
+            <input type="text" class="form-control" name="negmatrix" id="field_negmatrix"
+                [(ngModel)]="selectedKeyWords.negmatrix" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

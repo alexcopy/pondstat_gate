@@ -1,0 +1,38 @@
+
+<div *ngIf="selectedKeyWords">
+    <h2><span jhiTranslate="gateApp.selectedKeyWords.detail.title">Selected Key Words</span> {{selectedKeyWords.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="gateApp.selectedKeyWords.modelid">Modelid</span></dt>
+        <dd>
+            <span>{{selectedKeyWords.modelid}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.selectedKeyWords.posmatrix">Posmatrix</span></dt>
+        <dd>
+            <span>{{selectedKeyWords.posmatrix}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.selectedKeyWords.neutmatrix">Neutmatrix</span></dt>
+        <dd>
+            <span>{{selectedKeyWords.neutmatrix}}</span>
+        </dd>
+        <dt><span jhiTranslate="gateApp.selectedKeyWords.negmatrix">Negmatrix</span></dt>
+        <dd>
+            <span>{{selectedKeyWords.negmatrix}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'selected-key-words-my-suffix/'+ selectedKeyWords.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
