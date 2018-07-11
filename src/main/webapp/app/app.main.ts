@@ -8,6 +8,7 @@ if (module['hot']) {
     module['hot'].accept();
 }
 
-platformBrowserDynamic().bootstrapModule(GateAppModule)
-.then((success) => console.log(`Application started`))
-.catch((err) => console.error(err));
+platformBrowserDynamic()
+    .bootstrapModule(GateAppModule, { preserveWhitespaces: true })
+    .then(success => console.log(`Application started`))
+    .catch(err => console.error(err));

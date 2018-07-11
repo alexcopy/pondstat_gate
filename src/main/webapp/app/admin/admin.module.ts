@@ -1,8 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { JhiTrackerService } from './../shared/tracker/tracker.service';
-
-import { GateSharedModule } from '../shared';
+import { JhiLanguageService } from 'ng-jhipster';
+import { JhiLanguageHelper } from 'app/core';
+import { GateSharedModule } from 'app/shared';
 /* jhipster-needle-add-admin-module-import - JHipster will add admin modules imports here */
 
 import {
@@ -15,20 +15,14 @@ import {
     JhiHealthCheckComponent,
     JhiConfigurationComponent,
     JhiDocsComponent,
-    AuditsService,
-    JhiConfigurationService,
-    JhiHealthService,
-    JhiMetricsService,
-    GatewayRoutesService,
     JhiGatewayComponent,
-    JhiTrackerComponent,
-    LogsService,
+    JhiTrackerComponent
 } from './';
 
 @NgModule({
     imports: [
         GateSharedModule,
-        RouterModule.forChild(adminState),
+        RouterModule.forChild(adminState)
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
     declarations: [
@@ -43,19 +37,15 @@ import {
         JhiMetricsMonitoringComponent,
         JhiMetricsMonitoringModalComponent
     ],
-    entryComponents: [
-        JhiHealthModalComponent,
-        JhiMetricsMonitoringModalComponent,
-    ],
-    providers: [
-        AuditsService,
-        JhiConfigurationService,
-        JhiHealthService,
-        JhiMetricsService,
-        GatewayRoutesService,
-        LogsService,
-        JhiTrackerService,
-    ],
+    entryComponents: [JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class GateAdminModule {}
+export class GateAdminModule {
+    constructor(private languageService: JhiLanguageService, private languageHelper: JhiLanguageHelper) {
+        this.languageHelper.language.subscribe((languageKey: string) => {
+            if (languageKey !== undefined) {
+                this.languageService.changeLanguage(languageKey);
+            }
+        });
+    }
+}

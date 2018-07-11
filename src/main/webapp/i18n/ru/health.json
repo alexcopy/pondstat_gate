@@ -2,7 +2,7 @@
     "health": {
         "title": "Состояние",
         "refresh.button": "Обновить",
-        "stacktrace": "Stacktrace",
+        "stacktrace": "Трассировки стека",
         "details": {
             "details": "Детали",
             "properties": "Параметры",
@@ -12,8 +12,8 @@
         },
         "indicator": {
             "discoveryComposite": "Discovery Composite",
-            "refreshScope": "Microservice Refresh Scope",
-            "configServer": "Microservice Config Server",
+            "refreshScope": "Область обновления микросервиса",
+            "configServer": "Сервер конфигурации микросервиса",
             "hystrix": "Hystrix",
             "diskSpace": "Место на диске",
             "mail": "Email",
