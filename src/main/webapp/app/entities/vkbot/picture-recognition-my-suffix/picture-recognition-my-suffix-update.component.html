@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-picture-recognition-my-suffix-heading" jhiTranslate="gateApp.vkbotPictureRecognition.home.createOrEditLabel">Create or edit a Picture Recognition</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!pictureRecognition.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="pictureRecognition.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.pictid" for="field_pictid">Pictid</label>
+                    <input type="number" class="form-control" name="pictid" id="field_pictid"
+                        [(ngModel)]="pictureRecognition.pictid" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.modelid" for="field_modelid">Modelid</label>
+                    <input type="number" class="form-control" name="modelid" id="field_modelid"
+                        [(ngModel)]="pictureRecognition.modelid" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.simpres" for="field_simpres">Simpres</label>
+                    <input type="number" class="form-control" name="simpres" id="field_simpres"
+                        [(ngModel)]="pictureRecognition.simpres" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.medres" for="field_medres">Medres</label>
+                    <input type="number" class="form-control" name="medres" id="field_medres"
+                        [(ngModel)]="pictureRecognition.medres" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.ignore" for="field_ignore">Ignore</label>
+                    <input type="number" class="form-control" name="ignore" id="field_ignore"
+                        [(ngModel)]="pictureRecognition.ignore" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.isselected" for="field_isselected">Isselected</label>
+                    <input type="number" class="form-control" name="isselected" id="field_isselected"
+                        [(ngModel)]="pictureRecognition.isselected" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotPictureRecognition.ismanual" for="field_ismanual">Ismanual</label>
+                    <input type="number" class="form-control" name="ismanual" id="field_ismanual"
+                        [(ngModel)]="pictureRecognition.ismanual" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

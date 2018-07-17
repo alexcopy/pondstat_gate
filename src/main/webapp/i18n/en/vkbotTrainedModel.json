@@ -1,0 +1,31 @@
+
+{
+    "gateApp": {
+        "vkbotTrainedModel" : {
+            "home": {
+                "title": "Trained Models",
+                "createLabel": "Create a new Trained Model",
+                "createOrEditLabel": "Create or edit a Trained Model",
+                "search": "Search for Trained Model"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Trained Model {{ id }}?"
+            },
+            "detail": {
+                "title": "Trained Model"
+            },
+            "modelName": "Model Name",
+            "posmatrix": "Posmatrix",
+            "negmatrix": "Negmatrix",
+            "neutmatrix": "Neutmatrix",
+            "modeltype": "Modeltype"
+        }
+    },
+    "vkbotApp": {
+        "vkbotTrainedModel" : {
+            "created": "A new Trained Model is created with identifier {{ param }}",
+            "updated": "A Trained Model is updated with identifier {{ param }}",
+            "deleted": "A Trained Model is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="clarifais">
+            <h2><span jhiTranslate="gateApp.vkbotClarifais.detail.title">Clarifais</span> {{clarifais.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.name">Name</span></dt>
+                <dd>
+                    <span>{{clarifais.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.email">Email</span></dt>
+                <dd>
+                    <span>{{clarifais.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.emailpassword">Emailpassword</span></dt>
+                <dd>
+                    <span>{{clarifais.emailpassword}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.apikey">Apikey</span></dt>
+                <dd>
+                    <span>{{clarifais.apikey}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.modelname">Modelname</span></dt>
+                <dd>
+                    <span>{{clarifais.modelname}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.country">Country</span></dt>
+                <dd>
+                    <span>{{clarifais.country}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.billday">Billday</span></dt>
+                <dd>
+                    <span>{{clarifais.billday}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.totalusage">Totalusage</span></dt>
+                <dd>
+                    <span>{{clarifais.totalusage}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifais.count">Count</span></dt>
+                <dd>
+                    <span>{{clarifais.count}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/clarifais-my-suffix', clarifais.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

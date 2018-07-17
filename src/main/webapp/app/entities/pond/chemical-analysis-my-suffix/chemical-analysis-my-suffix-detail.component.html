@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="chemicalAnalysis">
+            <h2><span jhiTranslate="gateApp.pondChemicalAnalysis.detail.title">Chemical Analysis</span> {{chemicalAnalysis.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.date">Date</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.nO2">N O 2</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.nO2}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.nO3">N O 3</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.nO3}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.nH4">N H 4</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.nH4}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.ph">Ph</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.ph}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.tempVal">Temp Val</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.tempVal}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondChemicalAnalysis.timestamp">Timestamp</span></dt>
+                <dd>
+                    <span>{{chemicalAnalysis.timestamp}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/chemical-analysis-my-suffix', chemicalAnalysis.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

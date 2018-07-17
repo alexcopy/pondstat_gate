@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="liveStock">
+            <h2><span jhiTranslate="gateApp.pondLiveStock.detail.title">Live Stock</span> {{liveStock.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.pondLiveStock.date">Date</span></dt>
+                <dd>
+                    <span>{{liveStock.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondLiveStock.reason">Reason</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'gateApp.StockCase.' + liveStock.reason}}">{{liveStock.reason}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondLiveStock.description">Description</span></dt>
+                <dd>
+                    <span>{{liveStock.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondLiveStock.qty">Qty</span></dt>
+                <dd>
+                    <span>{{liveStock.qty}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondLiveStock.tempVal">Temp Val</span></dt>
+                <dd>
+                    <span>{{liveStock.tempVal}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondLiveStock.timestamp">Timestamp</span></dt>
+                <dd>
+                    <span>{{liveStock.timestamp}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/live-stock-my-suffix', liveStock.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

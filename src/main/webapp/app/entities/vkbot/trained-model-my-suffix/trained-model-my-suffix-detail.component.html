@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="trainedModel">
+            <h2><span jhiTranslate="gateApp.vkbotTrainedModel.detail.title">Trained Model</span> {{trainedModel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotTrainedModel.modelName">Model Name</span></dt>
+                <dd>
+                    <span>{{trainedModel.modelName}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotTrainedModel.posmatrix">Posmatrix</span></dt>
+                <dd>
+                    <span>{{trainedModel.posmatrix}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotTrainedModel.negmatrix">Negmatrix</span></dt>
+                <dd>
+                    <span>{{trainedModel.negmatrix}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotTrainedModel.neutmatrix">Neutmatrix</span></dt>
+                <dd>
+                    <span>{{trainedModel.neutmatrix}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotTrainedModel.modeltype">Modeltype</span></dt>
+                <dd>
+                    <span>{{trainedModel.modeltype}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/trained-model-my-suffix', trainedModel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

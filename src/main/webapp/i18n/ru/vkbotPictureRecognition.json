@@ -1,0 +1,33 @@
+
+{
+    "gateApp": {
+        "vkbotPictureRecognition" : {
+            "home": {
+                "title": "Picture Recognitions",
+                "createLabel": "Создать новый Picture Recognition",
+                "createOrEditLabel": "Создать или отредактировать Picture Recognition",
+                "search": "Найти Picture Recognition"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Picture Recognition {{ id }}?"
+            },
+            "detail": {
+                "title": "Picture Recognition"
+            },
+            "pictid": "Pictid",
+            "modelid": "Modelid",
+            "simpres": "Simpres",
+            "medres": "Medres",
+            "ignore": "Ignore",
+            "isselected": "Isselected",
+            "ismanual": "Ismanual"
+        }
+    },
+    "vkbotApp": {
+        "vkbotPictureRecognition" : {
+            "created": "Новый Picture Recognition создан с идентификатором {{ param }}",
+            "updated": "Picture Recognition обновлен с идентификатором {{ param }}",
+            "deleted": "Picture Recognition удален с идентификатором {{ param }}"
+        }
+    }
+}

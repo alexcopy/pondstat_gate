@@ -1,0 +1,29 @@
+
+{
+    "gateApp": {
+        "vkbotSuggestIgnored" : {
+            "home": {
+                "title": "Suggest Ignoreds",
+                "createLabel": "Create a new Suggest Ignored",
+                "createOrEditLabel": "Create or edit a Suggest Ignored",
+                "search": "Search for Suggest Ignored"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Suggest Ignored {{ id }}?"
+            },
+            "detail": {
+                "title": "Suggest Ignored"
+            },
+            "pictid": "Pictid",
+            "modelid": "Modelid",
+            "resultid": "Resultid"
+        }
+    },
+    "vkbotApp": {
+        "vkbotSuggestIgnored" : {
+            "created": "A new Suggest Ignored is created with identifier {{ param }}",
+            "updated": "A Suggest Ignored is updated with identifier {{ param }}",
+            "deleted": "A Suggest Ignored is deleted with identifier {{ param }}"
+        }
+    }
+}

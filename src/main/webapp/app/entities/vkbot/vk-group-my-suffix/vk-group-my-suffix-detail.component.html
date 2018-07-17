@@ -1,0 +1,67 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="vkGroup">
+            <h2><span jhiTranslate="gateApp.vkbotVkGroup.detail.title">Vk Group</span> {{vkGroup.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.groupid">Groupid</span></dt>
+                <dd>
+                    <span>{{vkGroup.groupid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.name">Name</span></dt>
+                <dd>
+                    <span>{{vkGroup.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.screenname">Screenname</span></dt>
+                <dd>
+                    <span>{{vkGroup.screenname}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.type">Type</span></dt>
+                <dd>
+                    <span>{{vkGroup.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.isclosed">Isclosed</span></dt>
+                <dd>
+                    <span>{{vkGroup.isclosed}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.proc">Proc</span></dt>
+                <dd>
+                    <span>{{vkGroup.proc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.procusers">Procusers</span></dt>
+                <dd>
+                    <span>{{vkGroup.procusers}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.usersqty">Usersqty</span></dt>
+                <dd>
+                    <span>{{vkGroup.usersqty}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.usersadded">Usersadded</span></dt>
+                <dd>
+                    <span>{{vkGroup.usersadded}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.ignore">Ignore</span></dt>
+                <dd>
+                    <span>{{vkGroup.ignore}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkGroup.stateProvince">State Province</span></dt>
+                <dd>
+                    <span>{{vkGroup.stateProvince}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/vk-group-my-suffix', vkGroup.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

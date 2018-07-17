@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pictureRecognition">
+            <h2><span jhiTranslate="gateApp.vkbotPictureRecognition.detail.title">Picture Recognition</span> {{pictureRecognition.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.pictid">Pictid</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.pictid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.modelid">Modelid</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.modelid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.simpres">Simpres</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.simpres}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.medres">Medres</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.medres}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.ignore">Ignore</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.ignore}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.isselected">Isselected</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.isselected}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotPictureRecognition.ismanual">Ismanual</span></dt>
+                <dd>
+                    <span>{{pictureRecognition.ismanual}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/picture-recognition-my-suffix', pictureRecognition.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

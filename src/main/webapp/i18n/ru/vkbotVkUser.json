@@ -1,0 +1,44 @@
+
+{
+    "gateApp": {
+        "vkbotVkUser" : {
+            "home": {
+                "title": "Vk Users",
+                "createLabel": "Создать новый Vk User",
+                "createOrEditLabel": "Создать или отредактировать Vk User",
+                "search": "Найти Vk User"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Vk User {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk User"
+            },
+            "userId": "User Id",
+            "firstname": "Firstname",
+            "lastname": "Lastname",
+            "sex": "Sex",
+            "bdate": "Bdate",
+            "cityid": "Cityid",
+            "citytitle": "Citytitle",
+            "countryid": "Countryid",
+            "countrytitle": "Countrytitle",
+            "groupscount": "Groupscount",
+            "groupsproc": "Groupsproc",
+            "images": "Images",
+            "imagesproc": "Imagesproc",
+            "lastseen": "Lastseen",
+            "platform": "Platform",
+            "ignore": "Ignore",
+            "proc": "Proc",
+            "photo100": "Photo 100"
+        }
+    },
+    "vkbotApp": {
+        "vkbotVkUser" : {
+            "created": "Новый Vk User создан с идентификатором {{ param }}",
+            "updated": "Vk User обновлен с идентификатором {{ param }}",
+            "deleted": "Vk User удален с идентификатором {{ param }}"
+        }
+    }
+}

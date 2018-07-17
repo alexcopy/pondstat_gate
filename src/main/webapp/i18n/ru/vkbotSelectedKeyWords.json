@@ -1,0 +1,30 @@
+
+{
+    "gateApp": {
+        "vkbotSelectedKeyWords" : {
+            "home": {
+                "title": "Selected Key Words",
+                "createLabel": "Создать новый Selected Key Words",
+                "createOrEditLabel": "Создать или отредактировать Selected Key Words",
+                "search": "Найти Selected Key Words"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Selected Key Words {{ id }}?"
+            },
+            "detail": {
+                "title": "Selected Key Words"
+            },
+            "modelid": "Modelid",
+            "posmatrix": "Posmatrix",
+            "neutmatrix": "Neutmatrix",
+            "negmatrix": "Negmatrix"
+        }
+    },
+    "vkbotApp": {
+        "vkbotSelectedKeyWords" : {
+            "created": "Новый Selected Key Words создан с идентификатором {{ param }}",
+            "updated": "Selected Key Words обновлен с идентификатором {{ param }}",
+            "deleted": "Selected Key Words удален с идентификатором {{ param }}"
+        }
+    }
+}

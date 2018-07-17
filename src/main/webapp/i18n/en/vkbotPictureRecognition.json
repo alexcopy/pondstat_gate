@@ -1,0 +1,33 @@
+
+{
+    "gateApp": {
+        "vkbotPictureRecognition" : {
+            "home": {
+                "title": "Picture Recognitions",
+                "createLabel": "Create a new Picture Recognition",
+                "createOrEditLabel": "Create or edit a Picture Recognition",
+                "search": "Search for Picture Recognition"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Picture Recognition {{ id }}?"
+            },
+            "detail": {
+                "title": "Picture Recognition"
+            },
+            "pictid": "Pictid",
+            "modelid": "Modelid",
+            "simpres": "Simpres",
+            "medres": "Medres",
+            "ignore": "Ignore",
+            "isselected": "Isselected",
+            "ismanual": "Ismanual"
+        }
+    },
+    "vkbotApp": {
+        "vkbotPictureRecognition" : {
+            "created": "A new Picture Recognition is created with identifier {{ param }}",
+            "updated": "A Picture Recognition is updated with identifier {{ param }}",
+            "deleted": "A Picture Recognition is deleted with identifier {{ param }}"
+        }
+    }
+}

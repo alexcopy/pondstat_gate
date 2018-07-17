@@ -1,0 +1,103 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gateApp.vkbotVkUser.home.title">Vk Users</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-vk-user-my-suffix" [routerLink]="['/vk-user-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="gateApp.vkbotVkUser.home.createLabel">
+            Create new Vk User
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gateApp.vkbotVkUser.home.search' | translate }}">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="vkUsers">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.userId">User Id</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.firstname">Firstname</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.lastname">Lastname</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.sex">Sex</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.bdate">Bdate</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.cityid">Cityid</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.citytitle">Citytitle</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.countryid">Countryid</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.countrytitle">Countrytitle</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.groupscount">Groupscount</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.groupsproc">Groupsproc</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.images">Images</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.imagesproc">Imagesproc</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.lastseen">Lastseen</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.platform">Platform</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.ignore">Ignore</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.proc">Proc</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkUser.photo100">Photo 100</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let vkUser of vkUsers ;trackBy: trackId">
+                <td><a [routerLink]="['/vk-user-my-suffix', vkUser.id, 'view' ]">{{vkUser.id}}</a></td>
+                <td>{{vkUser.userId}}</td>
+                <td>{{vkUser.firstname}}</td>
+                <td>{{vkUser.lastname}}</td>
+                <td>{{vkUser.sex}}</td>
+                <td>{{vkUser.bdate}}</td>
+                <td>{{vkUser.cityid}}</td>
+                <td>{{vkUser.citytitle}}</td>
+                <td>{{vkUser.countryid}}</td>
+                <td>{{vkUser.countrytitle}}</td>
+                <td>{{vkUser.groupscount}}</td>
+                <td>{{vkUser.groupsproc}}</td>
+                <td>{{vkUser.images}}</td>
+                <td>{{vkUser.imagesproc}}</td>
+                <td>{{vkUser.lastseen}}</td>
+                <td>{{vkUser.platform}}</td>
+                <td>{{vkUser.ignore}}</td>
+                <td>{{vkUser.proc}}</td>
+                <td>{{vkUser.photo100}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/vk-user-my-suffix', vkUser.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/vk-user-my-suffix', vkUser.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'vk-user-my-suffix/'+ vkUser.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

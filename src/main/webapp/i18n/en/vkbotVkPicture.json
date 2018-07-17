@@ -1,0 +1,41 @@
+
+{
+    "gateApp": {
+        "vkbotVkPicture" : {
+            "home": {
+                "title": "Vk Pictures",
+                "createLabel": "Create a new Vk Picture",
+                "createOrEditLabel": "Create or edit a Vk Picture",
+                "search": "Search for Vk Picture"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Vk Picture {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk Picture"
+            },
+            "pictId": "Pict Id",
+            "ownerId": "Owner Id",
+            "url": "Url",
+            "proc": "Proc",
+            "downloaded": "Downloaded",
+            "deleterank": "Deleterank",
+            "type": "Type",
+            "procid": "Procid",
+            "recognized": "Recognized",
+            "timestamp": "Timestamp",
+            "picdate": "Picdate",
+            "size": "Size",
+            "text": "Text",
+            "likes": "Likes",
+            "ignored": "Ignored"
+        }
+    },
+    "vkbotApp": {
+        "vkbotVkPicture" : {
+            "created": "A new Vk Picture is created with identifier {{ param }}",
+            "updated": "A Vk Picture is updated with identifier {{ param }}",
+            "deleted": "A Vk Picture is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tempMeter">
+            <h2><span jhiTranslate="gateApp.pondTempMeter.detail.title">Temp Meter</span> {{tempMeter.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.pondTempMeter.readingDate">Reading Date</span></dt>
+                <dd>
+                    <span>{{tempMeter.readingDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondTempMeter.tempVal">Temp Val</span></dt>
+                <dd>
+                    <span>{{tempMeter.tempVal}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondTempMeter.timestamp">Timestamp</span></dt>
+                <dd>
+                    <span>{{tempMeter.timestamp}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/temp-meter-my-suffix', tempMeter.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

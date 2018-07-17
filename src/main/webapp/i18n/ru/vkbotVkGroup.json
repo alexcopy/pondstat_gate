@@ -1,0 +1,37 @@
+
+{
+    "gateApp": {
+        "vkbotVkGroup" : {
+            "home": {
+                "title": "Vk Groups",
+                "createLabel": "Создать новый Vk Group",
+                "createOrEditLabel": "Создать или отредактировать Vk Group",
+                "search": "Найти Vk Group"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Vk Group {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk Group"
+            },
+            "groupid": "Groupid",
+            "name": "Name",
+            "screenname": "Screenname",
+            "type": "Type",
+            "isclosed": "Isclosed",
+            "proc": "Proc",
+            "procusers": "Procusers",
+            "usersqty": "Usersqty",
+            "usersadded": "Usersadded",
+            "ignore": "Ignore",
+            "stateProvince": "State Province"
+        }
+    },
+    "vkbotApp": {
+        "vkbotVkGroup" : {
+            "created": "Новый Vk Group создан с идентификатором {{ param }}",
+            "updated": "Vk Group обновлен с идентификатором {{ param }}",
+            "deleted": "Vk Group удален с идентификатором {{ param }}"
+        }
+    }
+}

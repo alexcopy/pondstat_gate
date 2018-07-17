@@ -1,0 +1,30 @@
+
+{
+    "gateApp": {
+        "vkbotModelTraining" : {
+            "home": {
+                "title": "Model Trainings",
+                "createLabel": "Создать новый Model Training",
+                "createOrEditLabel": "Создать или отредактировать Model Training",
+                "search": "Найти Model Training"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Model Training {{ id }}?"
+            },
+            "detail": {
+                "title": "Model Training"
+            },
+            "pictid": "Pictid",
+            "modelid": "Modelid",
+            "procid": "Procid",
+            "result": "Result"
+        }
+    },
+    "vkbotApp": {
+        "vkbotModelTraining" : {
+            "created": "Новый Model Training создан с идентификатором {{ param }}",
+            "updated": "Model Training обновлен с идентификатором {{ param }}",
+            "deleted": "Model Training удален с идентификатором {{ param }}"
+        }
+    }
+}

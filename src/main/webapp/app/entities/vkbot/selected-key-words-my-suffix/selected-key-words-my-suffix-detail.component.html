@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="selectedKeyWords">
+            <h2><span jhiTranslate="gateApp.vkbotSelectedKeyWords.detail.title">Selected Key Words</span> {{selectedKeyWords.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotSelectedKeyWords.modelid">Modelid</span></dt>
+                <dd>
+                    <span>{{selectedKeyWords.modelid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotSelectedKeyWords.posmatrix">Posmatrix</span></dt>
+                <dd>
+                    <span>{{selectedKeyWords.posmatrix}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotSelectedKeyWords.neutmatrix">Neutmatrix</span></dt>
+                <dd>
+                    <span>{{selectedKeyWords.neutmatrix}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotSelectedKeyWords.negmatrix">Negmatrix</span></dt>
+                <dd>
+                    <span>{{selectedKeyWords.negmatrix}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/selected-key-words-my-suffix', selectedKeyWords.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

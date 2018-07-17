@@ -1,0 +1,35 @@
+
+{
+    "gateApp": {
+        "vkbotClarifais" : {
+            "home": {
+                "title": "Clarifais",
+                "createLabel": "Создать новый Clarifais",
+                "createOrEditLabel": "Создать или отредактировать Clarifais",
+                "search": "Найти Clarifais"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Clarifais {{ id }}?"
+            },
+            "detail": {
+                "title": "Clarifais"
+            },
+            "name": "Name",
+            "email": "Email",
+            "emailpassword": "Emailpassword",
+            "apikey": "Apikey",
+            "modelname": "Modelname",
+            "country": "Country",
+            "billday": "Billday",
+            "totalusage": "Totalusage",
+            "count": "Count"
+        }
+    },
+    "vkbotApp": {
+        "vkbotClarifais" : {
+            "created": "Новый Clarifais создан с идентификатором {{ param }}",
+            "updated": "Clarifais обновлен с идентификатором {{ param }}",
+            "deleted": "Clarifais удален с идентификатором {{ param }}"
+        }
+    }
+}

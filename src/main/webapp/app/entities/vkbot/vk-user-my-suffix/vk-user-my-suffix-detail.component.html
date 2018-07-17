@@ -1,0 +1,95 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="vkUser">
+            <h2><span jhiTranslate="gateApp.vkbotVkUser.detail.title">Vk User</span> {{vkUser.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.userId">User Id</span></dt>
+                <dd>
+                    <span>{{vkUser.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.firstname">Firstname</span></dt>
+                <dd>
+                    <span>{{vkUser.firstname}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.lastname">Lastname</span></dt>
+                <dd>
+                    <span>{{vkUser.lastname}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.sex">Sex</span></dt>
+                <dd>
+                    <span>{{vkUser.sex}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.bdate">Bdate</span></dt>
+                <dd>
+                    <span>{{vkUser.bdate}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.cityid">Cityid</span></dt>
+                <dd>
+                    <span>{{vkUser.cityid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.citytitle">Citytitle</span></dt>
+                <dd>
+                    <span>{{vkUser.citytitle}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.countryid">Countryid</span></dt>
+                <dd>
+                    <span>{{vkUser.countryid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.countrytitle">Countrytitle</span></dt>
+                <dd>
+                    <span>{{vkUser.countrytitle}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.groupscount">Groupscount</span></dt>
+                <dd>
+                    <span>{{vkUser.groupscount}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.groupsproc">Groupsproc</span></dt>
+                <dd>
+                    <span>{{vkUser.groupsproc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.images">Images</span></dt>
+                <dd>
+                    <span>{{vkUser.images}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.imagesproc">Imagesproc</span></dt>
+                <dd>
+                    <span>{{vkUser.imagesproc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.lastseen">Lastseen</span></dt>
+                <dd>
+                    <span>{{vkUser.lastseen}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.platform">Platform</span></dt>
+                <dd>
+                    <span>{{vkUser.platform}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.ignore">Ignore</span></dt>
+                <dd>
+                    <span>{{vkUser.ignore}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.proc">Proc</span></dt>
+                <dd>
+                    <span>{{vkUser.proc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkUser.photo100">Photo 100</span></dt>
+                <dd>
+                    <span>{{vkUser.photo100}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/vk-user-my-suffix', vkUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

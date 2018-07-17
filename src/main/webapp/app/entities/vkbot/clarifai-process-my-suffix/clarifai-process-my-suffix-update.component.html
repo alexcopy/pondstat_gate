@@ -1,0 +1,80 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-clarifai-process-my-suffix-heading" jhiTranslate="gateApp.vkbotClarifaiProcess.home.createOrEditLabel">Create or edit a Clarifai Process</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!clarifaiProcess.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="clarifaiProcess.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.pictid" for="field_pictid">Pictid</label>
+                    <input type="number" class="form-control" name="pictid" id="field_pictid"
+                        [(ngModel)]="clarifaiProcess.pictid" required/>
+                    <div [hidden]="!(editForm.controls.pictid?.dirty && editForm.controls.pictid?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.pictid?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.pictid?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.pictkey" for="field_pictkey">Pictkey</label>
+                    <input type="number" class="form-control" name="pictkey" id="field_pictkey"
+                        [(ngModel)]="clarifaiProcess.pictkey" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.url" for="field_url">Url</label>
+                    <input type="text" class="form-control" name="url" id="field_url"
+                        [(ngModel)]="clarifaiProcess.url" required/>
+                    <div [hidden]="!(editForm.controls.url?.dirty && editForm.controls.url?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.url?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.firstfive" for="field_firstfive">Firstfive</label>
+                    <input type="text" class="form-control" name="firstfive" id="field_firstfive"
+                        [(ngModel)]="clarifaiProcess.firstfive" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.ignore" for="field_ignore">Ignore</label>
+                    <input type="number" class="form-control" name="ignore" id="field_ignore"
+                        [(ngModel)]="clarifaiProcess.ignore" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.proc" for="field_proc">Proc</label>
+                    <input type="number" class="form-control" name="proc" id="field_proc"
+                        [(ngModel)]="clarifaiProcess.proc" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.model" for="field_model">Model</label>
+                    <input type="text" class="form-control" name="model" id="field_model"
+                        [(ngModel)]="clarifaiProcess.model" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotClarifaiProcess.rawdata" for="field_rawdata">Rawdata</label>
+                    <input type="text" class="form-control" name="rawdata" id="field_rawdata"
+                        [(ngModel)]="clarifaiProcess.rawdata" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

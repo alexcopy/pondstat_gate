@@ -1,0 +1,121 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-vk-picture-my-suffix-heading" jhiTranslate="gateApp.vkbotVkPicture.home.createOrEditLabel">Create or edit a Vk Picture</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!vkPicture.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="vkPicture.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.pictId" for="field_pictId">Pict Id</label>
+                    <input type="text" class="form-control" name="pictId" id="field_pictId"
+                        [(ngModel)]="vkPicture.pictId" required/>
+                    <div [hidden]="!(editForm.controls.pictId?.dirty && editForm.controls.pictId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.pictId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.ownerId" for="field_ownerId">Owner Id</label>
+                    <input type="number" class="form-control" name="ownerId" id="field_ownerId"
+                        [(ngModel)]="vkPicture.ownerId" required/>
+                    <div [hidden]="!(editForm.controls.ownerId?.dirty && editForm.controls.ownerId?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.ownerId?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.ownerId?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.url" for="field_url">Url</label>
+                    <input type="text" class="form-control" name="url" id="field_url"
+                        [(ngModel)]="vkPicture.url" required/>
+                    <div [hidden]="!(editForm.controls.url?.dirty && editForm.controls.url?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.url?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.proc" for="field_proc">Proc</label>
+                    <input type="number" class="form-control" name="proc" id="field_proc"
+                        [(ngModel)]="vkPicture.proc" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.downloaded" for="field_downloaded">Downloaded</label>
+                    <input type="number" class="form-control" name="downloaded" id="field_downloaded"
+                        [(ngModel)]="vkPicture.downloaded" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.deleterank" for="field_deleterank">Deleterank</label>
+                    <input type="number" class="form-control" name="deleterank" id="field_deleterank"
+                        [(ngModel)]="vkPicture.deleterank" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.type" for="field_type">Type</label>
+                    <input type="text" class="form-control" name="type" id="field_type"
+                        [(ngModel)]="vkPicture.type" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.procid" for="field_procid">Procid</label>
+                    <input type="number" class="form-control" name="procid" id="field_procid"
+                        [(ngModel)]="vkPicture.procid" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.recognized" for="field_recognized">Recognized</label>
+                    <input type="number" class="form-control" name="recognized" id="field_recognized"
+                        [(ngModel)]="vkPicture.recognized" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.timestamp" for="field_timestamp">Timestamp</label>
+                    <input type="number" class="form-control" name="timestamp" id="field_timestamp"
+                        [(ngModel)]="vkPicture.timestamp" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.picdate" for="field_picdate">Picdate</label>
+                    <input type="number" class="form-control" name="picdate" id="field_picdate"
+                        [(ngModel)]="vkPicture.picdate" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.size" for="field_size">Size</label>
+                    <input type="number" class="form-control" name="size" id="field_size"
+                        [(ngModel)]="vkPicture.size" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.text" for="field_text">Text</label>
+                    <input type="text" class="form-control" name="text" id="field_text"
+                        [(ngModel)]="vkPicture.text" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.likes" for="field_likes">Likes</label>
+                    <input type="number" class="form-control" name="likes" id="field_likes"
+                        [(ngModel)]="vkPicture.likes" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkPicture.ignored" for="field_ignored">Ignored</label>
+                    <input type="number" class="form-control" name="ignored" id="field_ignored"
+                        [(ngModel)]="vkPicture.ignored" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

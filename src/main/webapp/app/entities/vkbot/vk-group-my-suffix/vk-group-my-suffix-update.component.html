@@ -1,0 +1,95 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-vk-group-my-suffix-heading" jhiTranslate="gateApp.vkbotVkGroup.home.createOrEditLabel">Create or edit a Vk Group</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!vkGroup.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="vkGroup.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.groupid" for="field_groupid">Groupid</label>
+                    <input type="number" class="form-control" name="groupid" id="field_groupid"
+                        [(ngModel)]="vkGroup.groupid" required/>
+                    <div [hidden]="!(editForm.controls.groupid?.dirty && editForm.controls.groupid?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.groupid?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.groupid?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="vkGroup.name" required/>
+                    <div [hidden]="!(editForm.controls.name?.dirty && editForm.controls.name?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.name?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.screenname" for="field_screenname">Screenname</label>
+                    <input type="text" class="form-control" name="screenname" id="field_screenname"
+                        [(ngModel)]="vkGroup.screenname" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.type" for="field_type">Type</label>
+                    <input type="text" class="form-control" name="type" id="field_type"
+                        [(ngModel)]="vkGroup.type" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.isclosed" for="field_isclosed">Isclosed</label>
+                    <input type="number" class="form-control" name="isclosed" id="field_isclosed"
+                        [(ngModel)]="vkGroup.isclosed" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.proc" for="field_proc">Proc</label>
+                    <input type="number" class="form-control" name="proc" id="field_proc"
+                        [(ngModel)]="vkGroup.proc" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.procusers" for="field_procusers">Procusers</label>
+                    <input type="number" class="form-control" name="procusers" id="field_procusers"
+                        [(ngModel)]="vkGroup.procusers" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.usersqty" for="field_usersqty">Usersqty</label>
+                    <input type="number" class="form-control" name="usersqty" id="field_usersqty"
+                        [(ngModel)]="vkGroup.usersqty" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.usersadded" for="field_usersadded">Usersadded</label>
+                    <input type="number" class="form-control" name="usersadded" id="field_usersadded"
+                        [(ngModel)]="vkGroup.usersadded" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.ignore" for="field_ignore">Ignore</label>
+                    <input type="number" class="form-control" name="ignore" id="field_ignore"
+                        [(ngModel)]="vkGroup.ignore" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotVkGroup.stateProvince" for="field_stateProvince">State Province</label>
+                    <input type="text" class="form-control" name="stateProvince" id="field_stateProvince"
+                        [(ngModel)]="vkGroup.stateProvince" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

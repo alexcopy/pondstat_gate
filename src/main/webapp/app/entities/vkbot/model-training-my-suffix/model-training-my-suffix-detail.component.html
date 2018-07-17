@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="modelTraining">
+            <h2><span jhiTranslate="gateApp.vkbotModelTraining.detail.title">Model Training</span> {{modelTraining.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotModelTraining.pictid">Pictid</span></dt>
+                <dd>
+                    <span>{{modelTraining.pictid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotModelTraining.modelid">Modelid</span></dt>
+                <dd>
+                    <span>{{modelTraining.modelid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotModelTraining.procid">Procid</span></dt>
+                <dd>
+                    <span>{{modelTraining.procid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotModelTraining.result">Result</span></dt>
+                <dd>
+                    <span>{{modelTraining.result}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/model-training-my-suffix', modelTraining.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

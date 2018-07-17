@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="meterReading">
+            <h2><span jhiTranslate="gateApp.pondMeterReading.detail.title">Meter Reading</span> {{meterReading.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.pondMeterReading.readingDate">Reading Date</span></dt>
+                <dd>
+                    <span>{{meterReading.readingDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondMeterReading.description">Description</span></dt>
+                <dd>
+                    <span>{{meterReading.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondMeterReading.reading">Reading</span></dt>
+                <dd>
+                    <span>{{meterReading.reading}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.pondMeterReading.tempVal">Temp Val</span></dt>
+                <dd>
+                    <span>{{meterReading.tempVal}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/meter-reading-my-suffix', meterReading.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

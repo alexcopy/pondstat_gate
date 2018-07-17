@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-selected-key-words-my-suffix-heading" jhiTranslate="gateApp.vkbotSelectedKeyWords.home.createOrEditLabel">Create or edit a Selected Key Words</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!selectedKeyWords.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="selectedKeyWords.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotSelectedKeyWords.modelid" for="field_modelid">Modelid</label>
+                    <input type="number" class="form-control" name="modelid" id="field_modelid"
+                        [(ngModel)]="selectedKeyWords.modelid" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotSelectedKeyWords.posmatrix" for="field_posmatrix">Posmatrix</label>
+                    <input type="text" class="form-control" name="posmatrix" id="field_posmatrix"
+                        [(ngModel)]="selectedKeyWords.posmatrix" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotSelectedKeyWords.neutmatrix" for="field_neutmatrix">Neutmatrix</label>
+                    <input type="text" class="form-control" name="neutmatrix" id="field_neutmatrix"
+                        [(ngModel)]="selectedKeyWords.neutmatrix" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gateApp.vkbotSelectedKeyWords.negmatrix" for="field_negmatrix">Negmatrix</label>
+                    <input type="text" class="form-control" name="negmatrix" id="field_negmatrix"
+                        [(ngModel)]="selectedKeyWords.negmatrix" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

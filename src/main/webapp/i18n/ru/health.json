@@ -17,6 +17,7 @@
             "hystrix": "Hystrix",
             "diskSpace": "Место на диске",
             "mail": "Email",
+            "elasticsearch": "Elasticsearch",
             "db": "База данных"
         },
         "table": {
@@ -24,7 +25,6 @@
             "status": "Статус"
         },
         "status": {
-            "UNKNOWN": "UNKNOWN",
             "UP": "UP",
             "DOWN": "DOWN"
         }

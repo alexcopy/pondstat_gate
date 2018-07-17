@@ -1,0 +1,44 @@
+
+{
+    "gateApp": {
+        "vkbotVkUser" : {
+            "home": {
+                "title": "Vk Users",
+                "createLabel": "Create a new Vk User",
+                "createOrEditLabel": "Create or edit a Vk User",
+                "search": "Search for Vk User"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Vk User {{ id }}?"
+            },
+            "detail": {
+                "title": "Vk User"
+            },
+            "userId": "User Id",
+            "firstname": "Firstname",
+            "lastname": "Lastname",
+            "sex": "Sex",
+            "bdate": "Bdate",
+            "cityid": "Cityid",
+            "citytitle": "Citytitle",
+            "countryid": "Countryid",
+            "countrytitle": "Countrytitle",
+            "groupscount": "Groupscount",
+            "groupsproc": "Groupsproc",
+            "images": "Images",
+            "imagesproc": "Imagesproc",
+            "lastseen": "Lastseen",
+            "platform": "Platform",
+            "ignore": "Ignore",
+            "proc": "Proc",
+            "photo100": "Photo 100"
+        }
+    },
+    "vkbotApp": {
+        "vkbotVkUser" : {
+            "created": "A new Vk User is created with identifier {{ param }}",
+            "updated": "A Vk User is updated with identifier {{ param }}",
+            "deleted": "A Vk User is deleted with identifier {{ param }}"
+        }
+    }
+}

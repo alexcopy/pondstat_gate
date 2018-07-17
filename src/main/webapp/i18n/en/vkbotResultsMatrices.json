@@ -1,0 +1,30 @@
+
+{
+    "gateApp": {
+        "vkbotResultsMatrices" : {
+            "home": {
+                "title": "Results Matrices",
+                "createLabel": "Create a new Results Matrices",
+                "createOrEditLabel": "Create or edit a Results Matrices",
+                "search": "Search for Results Matrices"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Results Matrices {{ id }}?"
+            },
+            "detail": {
+                "title": "Results Matrices"
+            },
+            "resid": "Resid",
+            "result": "Result",
+            "type": "Type",
+            "matrix": "Matrix"
+        }
+    },
+    "vkbotApp": {
+        "vkbotResultsMatrices" : {
+            "created": "A new Results Matrices is created with identifier {{ param }}",
+            "updated": "A Results Matrices is updated with identifier {{ param }}",
+            "deleted": "A Results Matrices is deleted with identifier {{ param }}"
+        }
+    }
+}

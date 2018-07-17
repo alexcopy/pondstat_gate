@@ -1,0 +1,29 @@
+
+{
+    "gateApp": {
+        "vkbotSuggestIgnored" : {
+            "home": {
+                "title": "Suggest Ignoreds",
+                "createLabel": "Создать новый Suggest Ignored",
+                "createOrEditLabel": "Создать или отредактировать Suggest Ignored",
+                "search": "Найти Suggest Ignored"
+            },
+            "delete": {
+                "question": "Вы уверены что хотите удалить Suggest Ignored {{ id }}?"
+            },
+            "detail": {
+                "title": "Suggest Ignored"
+            },
+            "pictid": "Pictid",
+            "modelid": "Modelid",
+            "resultid": "Resultid"
+        }
+    },
+    "vkbotApp": {
+        "vkbotSuggestIgnored" : {
+            "created": "Новый Suggest Ignored создан с идентификатором {{ param }}",
+            "updated": "Suggest Ignored обновлен с идентификатором {{ param }}",
+            "deleted": "Suggest Ignored удален с идентификатором {{ param }}"
+        }
+    }
+}

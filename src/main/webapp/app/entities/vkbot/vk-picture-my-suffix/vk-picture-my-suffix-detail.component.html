@@ -1,0 +1,83 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="vkPicture">
+            <h2><span jhiTranslate="gateApp.vkbotVkPicture.detail.title">Vk Picture</span> {{vkPicture.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.pictId">Pict Id</span></dt>
+                <dd>
+                    <span>{{vkPicture.pictId}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.ownerId">Owner Id</span></dt>
+                <dd>
+                    <span>{{vkPicture.ownerId}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.url">Url</span></dt>
+                <dd>
+                    <span>{{vkPicture.url}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.proc">Proc</span></dt>
+                <dd>
+                    <span>{{vkPicture.proc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.downloaded">Downloaded</span></dt>
+                <dd>
+                    <span>{{vkPicture.downloaded}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.deleterank">Deleterank</span></dt>
+                <dd>
+                    <span>{{vkPicture.deleterank}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.type">Type</span></dt>
+                <dd>
+                    <span>{{vkPicture.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.procid">Procid</span></dt>
+                <dd>
+                    <span>{{vkPicture.procid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.recognized">Recognized</span></dt>
+                <dd>
+                    <span>{{vkPicture.recognized}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.timestamp">Timestamp</span></dt>
+                <dd>
+                    <span>{{vkPicture.timestamp}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.picdate">Picdate</span></dt>
+                <dd>
+                    <span>{{vkPicture.picdate}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.size">Size</span></dt>
+                <dd>
+                    <span>{{vkPicture.size}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.text">Text</span></dt>
+                <dd>
+                    <span>{{vkPicture.text}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.likes">Likes</span></dt>
+                <dd>
+                    <span>{{vkPicture.likes}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotVkPicture.ignored">Ignored</span></dt>
+                <dd>
+                    <span>{{vkPicture.ignored}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/vk-picture-my-suffix', vkPicture.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{
+    "gateApp": {
+        "DeviceType" : {
+            "null": "",
+            "PUMP": "PUMP",
+            "FILTER": "FILTER",
+            "UVLAMP": "UVLAMP",
+            "UVCLARIFIER": "UVCLARIFIER",
+            "AIRPUMP": "AIRPUMP",
+            "OTHER": "OTHER"
+        }
+    }
+}

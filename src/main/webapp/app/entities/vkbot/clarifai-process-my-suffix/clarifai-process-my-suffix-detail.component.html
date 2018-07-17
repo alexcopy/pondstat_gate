@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="clarifaiProcess">
+            <h2><span jhiTranslate="gateApp.vkbotClarifaiProcess.detail.title">Clarifai Process</span> {{clarifaiProcess.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.pictid">Pictid</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.pictid}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.pictkey">Pictkey</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.pictkey}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.url">Url</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.url}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.firstfive">Firstfive</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.firstfive}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.ignore">Ignore</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.ignore}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.proc">Proc</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.proc}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.model">Model</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.model}}</span>
+                </dd>
+                <dt><span jhiTranslate="gateApp.vkbotClarifaiProcess.rawdata">Rawdata</span></dt>
+                <dd>
+                    <span>{{clarifaiProcess.rawdata}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/clarifai-process-my-suffix', clarifaiProcess.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

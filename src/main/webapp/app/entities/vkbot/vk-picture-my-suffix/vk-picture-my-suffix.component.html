@@ -1,0 +1,97 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="gateApp.vkbotVkPicture.home.title">Vk Pictures</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-vk-picture-my-suffix" [routerLink]="['/vk-picture-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span class="hidden-sm-down"  jhiTranslate="gateApp.vkbotVkPicture.home.createLabel">
+            Create new Vk Picture
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="searchForm" class="form-inline">
+                <div class="input-group w-100 mt-3">
+                    <input type="text" class="form-control" [(ngModel)]="currentSearch" id="currentSearch" name="currentSearch" placeholder="{{ 'gateApp.vkbotVkPicture.home.search' | translate }}">
+                    <button class="input-group-append btn btn-info" (click)="search(currentSearch)">
+                        <fa-icon [icon]="'search'"></fa-icon>
+                    </button>
+                    <button class="input-group-append btn btn-danger" (click)="clear()" *ngIf="currentSearch">
+                        <fa-icon [icon]="'trash-alt'"></fa-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="vkPictures">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.pictId">Pict Id</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.ownerId">Owner Id</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.url">Url</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.proc">Proc</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.downloaded">Downloaded</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.deleterank">Deleterank</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.type">Type</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.procid">Procid</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.recognized">Recognized</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.timestamp">Timestamp</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.picdate">Picdate</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.size">Size</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.text">Text</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.likes">Likes</span></th>
+            <th><span jhiTranslate="gateApp.vkbotVkPicture.ignored">Ignored</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let vkPicture of vkPictures ;trackBy: trackId">
+                <td><a [routerLink]="['/vk-picture-my-suffix', vkPicture.id, 'view' ]">{{vkPicture.id}}</a></td>
+                <td>{{vkPicture.pictId}}</td>
+                <td>{{vkPicture.ownerId}}</td>
+                <td>{{vkPicture.url}}</td>
+                <td>{{vkPicture.proc}}</td>
+                <td>{{vkPicture.downloaded}}</td>
+                <td>{{vkPicture.deleterank}}</td>
+                <td>{{vkPicture.type}}</td>
+                <td>{{vkPicture.procid}}</td>
+                <td>{{vkPicture.recognized}}</td>
+                <td>{{vkPicture.timestamp}}</td>
+                <td>{{vkPicture.picdate}}</td>
+                <td>{{vkPicture.size}}</td>
+                <td>{{vkPicture.text}}</td>
+                <td>{{vkPicture.likes}}</td>
+                <td>{{vkPicture.ignored}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/vk-picture-my-suffix', vkPicture.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/vk-picture-my-suffix', vkPicture.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'vk-picture-my-suffix/'+ vkPicture.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

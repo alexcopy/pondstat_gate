@@ -1,0 +1,34 @@
+
+{
+    "gateApp": {
+        "vkbotClarifaiProcess" : {
+            "home": {
+                "title": "Clarifai Processes",
+                "createLabel": "Create a new Clarifai Process",
+                "createOrEditLabel": "Create or edit a Clarifai Process",
+                "search": "Search for Clarifai Process"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Clarifai Process {{ id }}?"
+            },
+            "detail": {
+                "title": "Clarifai Process"
+            },
+            "pictid": "Pictid",
+            "pictkey": "Pictkey",
+            "url": "Url",
+            "firstfive": "Firstfive",
+            "ignore": "Ignore",
+            "proc": "Proc",
+            "model": "Model",
+            "rawdata": "Rawdata"
+        }
+    },
+    "vkbotApp": {
+        "vkbotClarifaiProcess" : {
+            "created": "A new Clarifai Process is created with identifier {{ param }}",
+            "updated": "A Clarifai Process is updated with identifier {{ param }}",
+            "deleted": "A Clarifai Process is deleted with identifier {{ param }}"
+        }
+    }
+}
