@@ -15,7 +15,7 @@ node {
     }
 
     stage('install tools') {
-        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v8.9.4 -DyarnVersion=v1.3.2"
+        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-yarn -DnodeVersion=v8.11.3 -DyarnVersion=v1.6.0"
     }
 
     stage('yarn install') {
@@ -32,10 +32,18 @@ node {
         }
     }
 
+    stage('frontend tests') {
+        try {
+            sh "./mvnw com.github.eirslett:frontend-maven-plugin:yarn -Dfrontend.yarn.arguments=test"
+        } catch(err) {
+            throw err
+        } finally {
+            junit '**/target/test-results/jest/TESTS-*.xml'
+        }
+    }
 
-
-    stage('packaging') {
-        sh "./mvnw verify -Pprod -DskipTests"
+    stage('package and deploy') {
+        sh "./mvnw com.heroku.sdk:heroku-maven-plugin:2.0.5:deploy -DskipTests -Pprod -Dheroku.appName="
         archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
     }
 
